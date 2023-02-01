@@ -1,0 +1,205 @@
+.btn{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                          Clear button with icon                            */
+/* -------------------------------------------------------------------------- */
+.btn-clear{
+    font-size: 1.2rem;
+    letter-spacing: calc(1.2rem / 6);
+    font-weight: $bold;
+    text-transform: uppercase;
+    border: 1px solid $charcoal;
+    border-radius: 2.5rem;
+    padding: 5px 20px;
+    transition: all 0.5s;
+    i{
+        margin-right: 10px;
+        transition: all 0.7s;
+    }
+    margin: 10px 0;
+    &:hover{
+        color: white;
+        padding: 5px 30px;
+        i{
+            color: white!important; 
+            transform: translateX(10px);
+        }
+    }
+    &:focus{
+        color: white!important;
+    }
+}
+.btn-clear.btn-sm{
+    font-size: 1rem;
+}
+.btn-clear.btn-teal{
+    i{ color: $teal;}
+    &:hover{
+        background: $teal;
+    }
+}
+.btn-clear.btn-orange{
+    i{ color: $orange;}
+    &:hover{
+        background: $orange;
+    }
+}
+.btn-clear.btn-blue{
+    i{ color: $blue;}
+    &:hover{
+        background: $blue;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            Solid button with/without icon                  */
+/* -------------------------------------------------------------------------- */
+.btn-solid{
+    background: black;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 2.5rem;
+    padding: 5px 30px;
+    border: none;
+    transition: all 0.5s;
+    margin: 10px 0;
+    i{
+        margin-right: 15px;
+    }
+    &:hover{
+        color: white;
+        padding: 5px 40px;
+    }
+
+}
+.btn-solid.btn-sm{
+    font-size: 1rem;
+    padding: 5px 20px;
+    &:hover{
+        color: white;
+        padding: 5px 40px;
+    }
+    
+}
+.btn-solid.btn-blue{
+    background: $blue;
+    &:hover{
+        background: lighten($blue, 10%);
+    }
+}
+.btn-solid.btn-teal{
+    background: $teal;
+    &:hover{
+        background: lighten($teal, 5%);
+    }
+}
+.btn-solid.btn-orange{
+    background: $orange;
+    &:hover{
+        background: lighten($orange, 10%);
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                        Line button with/without icon                       */
+/* -------------------------------------------------------------------------- */
+
+.btn-line{
+    background: white;
+    font-size: 1.2rem;
+    border-radius: 2.5rem!important;
+    padding: 5px 30px;
+    transition: all 0.5s;
+    margin: 10px 0;
+    font-weight: $bold;
+    i{
+        margin-right: 15px;
+    }
+    &:hover{
+        padding: 5px 40px;
+        color: white;
+    }
+
+}
+.btn-line.btn-sm{
+    font-size: 1rem;
+    padding: 5px 20px;
+    &:hover{
+        padding: 5px 40px;
+    }
+    
+}
+.btn-line.btn-blue{
+    color: $blue;
+    border: 3px solid $blue;
+    &:hover{
+        color: white;
+        background: $blue;
+    }
+}
+.btn-line.btn-teal{
+    color: $teal;
+    border: 3px solid $teal;
+    &:hover{
+        color: white;
+        background: $teal;
+    }
+}
+.btn-line.btn-orange{
+    color: $orange;
+    border: 3px solid $orange;
+    &:hover{
+        color: white;
+        background: $orange;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Icon buttons                                */
+/* -------------------------------------------------------------------------- */
+.btn.form-btn-icon{
+    background: $charcoal;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0 0.4rem;
+    border-radius: 2.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.5s;
+    transform-origin: center;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.btn.form-btn-icon.btn-teal{
+    background: $teal;
+    &:hover{
+        background: darken($teal, 10%);
+    }
+}
+.btn.form-btn-icon.btn-orange{
+    background: $orange;
+    &:hover{
+        background: lighten($orange, 10%);
+    }
+}
+.btn.form-btn-icon.btn-blue{
+    background: $blue;
+    &:hover{
+        background: lighten($blue, 10%);
+    }
+}
+.btn.form-btn-icon.btn-pale{
+    background: $pale-grey;
+    &:hover{
+        background: darken($pale-grey, 10%);
+    }
+}

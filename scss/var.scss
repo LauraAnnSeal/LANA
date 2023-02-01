@@ -1,0 +1,58 @@
+/* -------------------------------------------------------------------------- */
+/*                                    Fonts                                   */
+/* -------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$Montserrat: 'Montserrat', sans-serif;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Colours                                  */
+/* -------------------------------------------------------------------------- */
+$orange:#FF8800;
+$yellow:#FFDD00;
+$teal:#17BEBB;
+$blue: #337CA0;
+$charcoal: #6C6C6C;
+$grey: #bbbbbb;
+$pale-grey: #E5E5E5;
+
+$color-list: (
+    lana-orange:#FF8800,
+    lana-yellow:#FFDD00,
+    lana-teal:#17BEBB,
+    lana-blue: #337CA0,
+    lana-charcoal: #6C6C6C,
+    lana-grey: #bbbbbb,
+    lana-palegrey: #E5E5E5
+);
+
+@each $name, $color in $color-list {
+    .bg-#{$name}{background-color: $color;}
+    .text-#{$name}{color: $color;}
+    .border-#{$name}{border: 2px solid $color!important;}
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoints                                */
+/* -------------------------------------------------------------------------- */
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 2500px;
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Rounded                                  */
+/* -------------------------------------------------------------------------- */
+$rounded-element: 0.5rem;

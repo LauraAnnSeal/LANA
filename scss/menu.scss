@@ -1,0 +1,111 @@
+
+header{
+    width: 100vw;
+    height: 4rem;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    #site-logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4rem;
+    }
+    #ivory{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        form{
+            width: 100%;
+            background: white;
+            border-radius: 2.5rem!important;
+            padding: 5px 20px;
+            transition: all 0.5s;
+            margin: 10px 0;
+            font-weight: $bold;
+            border: 3px solid $pale-grey;
+            font-size: 1rem;
+            position: relative;
+            input{
+                border: none!important;
+                border-radius: 2.5rem 0 0 2.5rem;
+                background: white;
+                width: 100%!important;
+                font-family: $Montserrat!important;
+                font-weight: $semibold;
+                color: $grey;
+                &::placeholder{
+                    font-family: $Montserrat!important;
+                    font-weight: $semibold;
+                    color: $grey;
+                }
+            }
+            button.is-search-submit{
+                    border-radius: 0 2.5rem 2.5rem 0;
+                    border: none;
+                    background: $pale-grey;
+                    color: white;
+                    font-size: 1rem!important;
+                    display: inline-flex!important;
+                    justify-content: center!important;
+                    align-items: center!important;
+            }
+        }
+    }
+    #insta{
+        display: inline-flex;
+        justify-content: start;
+        align-items: center;
+    }
+    #menu-btn-div{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 4rem;
+        padding: 0;
+        h4{
+            margin-bottom: 0;
+        }
+        .menu-label{
+            margin-right: 0.5rem;
+            color: $grey;
+        }
+        .menu-btn{
+            background: $orange;
+            height: 4rem;
+            width: 4rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            h4{transition: all 0.3s;}
+            &:hover{
+                background: $teal;
+                h4{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+
+// ajax search
+#is-ajax-search-result-96.is-ajax-search-result{
+    position: fixed!important;
+    width: 50vw!important;
+    left: 25vw!important;
+}
+div.is-ajax-search-details, div.is-ajax-search-result{
+    margin-top: 50px;
+    position: fixed;
+    top: 6rem;
+    width: 50vw;
+    left: 25vw;
+}

@@ -1,0 +1,53 @@
+/*!
+Theme Name: Live Art Network Africa
+Theme URI: https://lauraannseal.com
+Author: Laura Ann Seal
+Author URI: https://lauraannseal.com
+Description: This WordPress theme with custom pages and posts is a theme that has been designed to include unique page templates and custom post types in addition to the standard pages and posts. Custom pages allow users to create unique layouts and designs for specific pages on their website. Custom post types allow users to add and manage custom content, such as portfolios, testimonials, or team members. These custom templates and post types provide more options for website owners to present their content in a way that fits their specific needs and brand.
+Version: 1.0.0
+Tested up to: 6.1.1
+Requires PHP: 5.6
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+@import 'mixins', 'var', 'font', 'buttons', 'form', 'menu';
+
+body{
+    font-family: $Montserrat;
+    font-size: 1rem;
+    color: $charcoal;
+    font-weight: $regular;
+    margin: 0;
+    padding: 0;
+}
+.box-shadow{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.rounded{
+    border-radius: 0.5rem;
+    @include mQ ($md){
+        border-radius: 0.8rem;
+    }
+}
+.region{
+    border: 1px solid $grey;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    @include mQ ($md){
+        border-radius: 0.8rem;
+    }
+    @include mQ ($lg){
+        padding: 2rem;
+    }
+}
+
+.info.region{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        margin-bottom: 0;
+    }
+}

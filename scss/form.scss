@@ -1,0 +1,135 @@
+/* -------------------------------------------------------------------------- */
+/*                                Search input                                */
+/* -------------------------------------------------------------------------- */
+
+.input-search{
+    height: 2rem;
+    &:hover{
+        input{
+            background: $pale-grey;
+        }
+    }
+    input{
+        padding-left: 20px!important;
+        border: 2px solid $teal;
+        border-radius: 1.5rem;
+        transition: all 0.5s;
+        &:focus{
+            background: $pale-grey;
+            outline: none;
+            border: 2px solid $teal;
+        }
+        
+    }
+    .input-group-end{
+        font-size: 1rem;
+        background: $teal;
+        color: white;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.5rem;;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Select                                   */
+/* -------------------------------------------------------------------------- */
+
+.dropdown{
+    button{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 2rem;
+        padding: 18px 20px;
+        border: 2px solid $teal;
+        border-radius: 0.5rem;
+        background: white;
+        color: $charcoal;
+    }
+    ul.dropdown-menu.show{
+        width: 100%;
+        border: none;
+        background: lighten($pale-grey, 5%);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.5s;
+        li{
+            background: $teal;
+            color: white;
+            border: 2px solid lighten($pale-grey, 5%);
+            padding: 2px 20px;
+            border-radius: 5px;
+            &:hover{
+                background: $blue;
+            }
+        }
+        li.active{
+            background: $blue;
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Main form                                 */
+/* -------------------------------------------------------------------------- */
+.form-box{
+    text-align: center;
+    border: 1px solid $grey;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow: hidden;
+    background: white;
+}
+.form-section-1, .form-section-2{
+    padding: 2rem 1rem;
+}
+.form-section-1{
+    border-bottom: 1px solid $grey;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: $pale-grey;
+}
+.form-section-2{
+    text-align: left;
+    .form-group{
+        margin-bottom: 2rem;
+    }
+    .wpcf7-not-valid-tip{
+        color: $orange;
+        font-weight: $medium;
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+    label{
+        font-size: 1rem;
+        font-weight: $semibold;
+        text-transform: uppercase;
+        @include mQ ($xxl){
+            font-size: 1.2rem;
+        }
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid $grey;
+        border-radius: 0;
+        box-shadow: none;
+        padding-left: 0;
+        &:focus{
+            border-bottom: 2px solid $teal;
+        }
+    }
+    input.wpcf7-file{
+        border: none;
+    }
+    textarea{
+        border: none;
+        margin-top: 1rem;
+        background: lighten($pale-grey, 7%);
+    }
+   
+    
+}

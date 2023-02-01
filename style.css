@@ -1,0 +1,736 @@
+/*!
+Theme Name: Live Art Network Africa
+Theme URI: https://lauraannseal.com
+Author: Laura Ann Seal
+Author URI: https://lauraannseal.com
+Description: This WordPress theme with custom pages and posts is a theme that has been designed to include unique page templates and custom post types in addition to the standard pages and posts. Custom pages allow users to create unique layouts and designs for specific pages on their website. Custom post types allow users to add and manage custom content, such as portfolios, testimonials, or team members. These custom templates and post types provide more options for website owners to present their content in a way that fits their specific needs and brand.
+Version: 1.0.0
+Tested up to: 6.1.1
+Requires PHP: 5.6
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+/* -------------------------------------------------------------------------- */
+/*                              // media queries                              */
+/* -------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@media (orientation: landscape) {
+  .portrait {
+    visibility: hidden;
+  }
+}
+@media (orientation: portrait) {
+  .landscape {
+    visibility: hidden;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                    Fonts                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Colours                                  */
+/* -------------------------------------------------------------------------- */
+.bg-lana-orange {
+  background-color: #FF8800;
+}
+
+.text-lana-orange {
+  color: #FF8800;
+}
+
+.border-lana-orange {
+  border: 2px solid #FF8800 !important;
+}
+
+.bg-lana-yellow {
+  background-color: #FFDD00;
+}
+
+.text-lana-yellow {
+  color: #FFDD00;
+}
+
+.border-lana-yellow {
+  border: 2px solid #FFDD00 !important;
+}
+
+.bg-lana-teal {
+  background-color: #17BEBB;
+}
+
+.text-lana-teal {
+  color: #17BEBB;
+}
+
+.border-lana-teal {
+  border: 2px solid #17BEBB !important;
+}
+
+.bg-lana-blue {
+  background-color: #337CA0;
+}
+
+.text-lana-blue {
+  color: #337CA0;
+}
+
+.border-lana-blue {
+  border: 2px solid #337CA0 !important;
+}
+
+.bg-lana-charcoal {
+  background-color: #6C6C6C;
+}
+
+.text-lana-charcoal {
+  color: #6C6C6C;
+}
+
+.border-lana-charcoal {
+  border: 2px solid #6C6C6C !important;
+}
+
+.bg-lana-grey {
+  background-color: #bbbbbb;
+}
+
+.text-lana-grey {
+  color: #bbbbbb;
+}
+
+.border-lana-grey {
+  border: 2px solid #bbbbbb !important;
+}
+
+.bg-lana-palegrey {
+  background-color: #E5E5E5;
+}
+
+.text-lana-palegrey {
+  color: #E5E5E5;
+}
+
+.border-lana-palegrey {
+  border: 2px solid #E5E5E5 !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoints                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Rounded                                  */
+/* -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-weight: 800;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+    letter-spacing: clac(4rem/6);
+  }
+}
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 6rem;
+    letter-spacing: clac(6rem/6);
+  }
+}
+@media only screen and (min-width: 2500px) {
+  h1 {
+    font-size: 8rem;
+    letter-spacing: clac(8rem/6);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 0.3333333333rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: clac(2.5rem/6);
+  }
+}
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 3rem;
+    letter-spacing: clac(3rem/6);
+  }
+}
+@media only screen and (min-width: 2500px) {
+  h2 {
+    font-size: 5rem;
+    letter-spacing: clac(5rem/6);
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+  letter-spacing: 0.2666666667rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 2rem;
+    letter-spacing: clac(2rem/6);
+  }
+}
+@media only screen and (min-width: 992px) {
+  h3 {
+    font-size: 2.5rem;
+    letter-spacing: clac(2.5rem/6);
+  }
+}
+@media only screen and (min-width: 2500px) {
+  h3 {
+    font-size: 3rem;
+    letter-spacing: clac(3rem/6);
+  }
+}
+
+h4 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2333333333rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2333333333rem;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 2500px) {
+  h4, h5 {
+    font-size: 2rem;
+    letter-spacing: clac(2rem/6);
+  }
+}
+
+p {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 2500px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+p.bolder {
+  font-weight: 600;
+}
+
+.btn {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          Clear button with icon                            */
+/* -------------------------------------------------------------------------- */
+.btn-clear {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #6C6C6C;
+  border-radius: 2.5rem;
+  padding: 5px 20px;
+  transition: all 0.5s;
+  margin: 10px 0;
+}
+.btn-clear i {
+  margin-right: 10px;
+  transition: all 0.7s;
+}
+.btn-clear:hover {
+  color: white;
+  padding: 5px 30px;
+}
+.btn-clear:hover i {
+  color: white !important;
+  transform: translateX(10px);
+}
+.btn-clear:focus {
+  color: white !important;
+}
+
+.btn-clear.btn-sm {
+  font-size: 1rem;
+}
+
+.btn-clear.btn-teal i {
+  color: #17BEBB;
+}
+.btn-clear.btn-teal:hover {
+  background: #17BEBB;
+}
+
+.btn-clear.btn-orange i {
+  color: #FF8800;
+}
+.btn-clear.btn-orange:hover {
+  background: #FF8800;
+}
+
+.btn-clear.btn-blue i {
+  color: #337CA0;
+}
+.btn-clear.btn-blue:hover {
+  background: #337CA0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Solid button with/without icon                  */
+/* -------------------------------------------------------------------------- */
+.btn-solid {
+  background: black;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 2.5rem;
+  padding: 5px 30px;
+  border: none;
+  transition: all 0.5s;
+  margin: 10px 0;
+}
+.btn-solid i {
+  margin-right: 15px;
+}
+.btn-solid:hover {
+  color: white;
+  padding: 5px 40px;
+}
+
+.btn-solid.btn-sm {
+  font-size: 1rem;
+  padding: 5px 20px;
+}
+.btn-solid.btn-sm:hover {
+  color: white;
+  padding: 5px 40px;
+}
+
+.btn-solid.btn-blue {
+  background: #337CA0;
+}
+.btn-solid.btn-blue:hover {
+  background: #4399c3;
+}
+
+.btn-solid.btn-teal {
+  background: #17BEBB;
+}
+.btn-solid.btn-teal:hover {
+  background: #1ad5d1;
+}
+
+.btn-solid.btn-orange {
+  background: #FF8800;
+}
+.btn-solid.btn-orange:hover {
+  background: #ffa033;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        Line button with/without icon                       */
+/* -------------------------------------------------------------------------- */
+.btn-line {
+  background: white;
+  font-size: 1.2rem;
+  border-radius: 2.5rem !important;
+  padding: 5px 30px;
+  transition: all 0.5s;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.btn-line i {
+  margin-right: 15px;
+}
+.btn-line:hover {
+  padding: 5px 40px;
+  color: white;
+}
+
+.btn-line.btn-sm {
+  font-size: 1rem;
+  padding: 5px 20px;
+}
+.btn-line.btn-sm:hover {
+  padding: 5px 40px;
+}
+
+.btn-line.btn-blue {
+  color: #337CA0;
+  border: 3px solid #337CA0;
+}
+.btn-line.btn-blue:hover {
+  color: white;
+  background: #337CA0;
+}
+
+.btn-line.btn-teal {
+  color: #17BEBB;
+  border: 3px solid #17BEBB;
+}
+.btn-line.btn-teal:hover {
+  color: white;
+  background: #17BEBB;
+}
+
+.btn-line.btn-orange {
+  color: #FF8800;
+  border: 3px solid #FF8800;
+}
+.btn-line.btn-orange:hover {
+  color: white;
+  background: #FF8800;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Icon buttons                                */
+/* -------------------------------------------------------------------------- */
+.btn.form-btn-icon {
+  background: #6C6C6C;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0 0.4rem;
+  border-radius: 2.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.5s;
+  transform-origin: center;
+}
+.btn.form-btn-icon:hover {
+  transform: scale(1.1);
+}
+
+.btn.form-btn-icon.btn-teal {
+  background: #17BEBB;
+}
+.btn.form-btn-icon.btn-teal:hover {
+  background: #11918e;
+}
+
+.btn.form-btn-icon.btn-orange {
+  background: #FF8800;
+}
+.btn.form-btn-icon.btn-orange:hover {
+  background: #ffa033;
+}
+
+.btn.form-btn-icon.btn-blue {
+  background: #337CA0;
+}
+.btn.form-btn-icon.btn-blue:hover {
+  background: #4399c3;
+}
+
+.btn.form-btn-icon.btn-pale {
+  background: #E5E5E5;
+}
+.btn.form-btn-icon.btn-pale:hover {
+  background: #cccccc;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Search input                                */
+/* -------------------------------------------------------------------------- */
+.input-search {
+  height: 2rem;
+}
+.input-search:hover input {
+  background: #E5E5E5;
+}
+.input-search input {
+  padding-left: 20px !important;
+  border: 2px solid #17BEBB;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+}
+.input-search input:focus {
+  background: #E5E5E5;
+  outline: none;
+  border: 2px solid #17BEBB;
+}
+.input-search .input-group-end {
+  font-size: 1rem;
+  background: #17BEBB;
+  color: white;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Select                                   */
+/* -------------------------------------------------------------------------- */
+.dropdown button {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 18px 20px;
+  border: 2px solid #17BEBB;
+  border-radius: 0.5rem;
+  background: white;
+  color: #6C6C6C;
+}
+.dropdown ul.dropdown-menu.show {
+  width: 100%;
+  border: none;
+  background: #f2f2f2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+.dropdown ul.dropdown-menu.show li {
+  background: #17BEBB;
+  color: white;
+  border: 2px solid #f2f2f2;
+  padding: 2px 20px;
+  border-radius: 5px;
+}
+.dropdown ul.dropdown-menu.show li:hover {
+  background: #337CA0;
+}
+.dropdown ul.dropdown-menu.show li.active {
+  background: #337CA0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Main form                                 */
+/* -------------------------------------------------------------------------- */
+.form-box {
+  text-align: center;
+  border: 1px solid #bbbbbb;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  overflow: hidden;
+  background: white;
+}
+
+.form-section-1, .form-section-2 {
+  padding: 2rem 1rem;
+}
+
+.form-section-1 {
+  border-bottom: 1px solid #bbbbbb;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background: #E5E5E5;
+}
+
+.form-section-2 {
+  text-align: left;
+}
+.form-section-2 .form-group {
+  margin-bottom: 2rem;
+}
+.form-section-2 .wpcf7-not-valid-tip {
+  color: #FF8800;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+.form-section-2 label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 2500px) {
+  .form-section-2 label {
+    font-size: 1.2rem;
+  }
+}
+.form-section-2 input {
+  border: none;
+  border-bottom: 1px solid #bbbbbb;
+  border-radius: 0;
+  box-shadow: none;
+  padding-left: 0;
+}
+.form-section-2 input:focus {
+  border-bottom: 2px solid #17BEBB;
+}
+.form-section-2 input.wpcf7-file {
+  border: none;
+}
+.form-section-2 textarea {
+  border: none;
+  margin-top: 1rem;
+  background: #f7f7f7;
+}
+
+header {
+  width: 100vw;
+  height: 4rem;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+header #site-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+}
+header #ivory {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+header #ivory form {
+  width: 100%;
+  background: white;
+  border-radius: 2.5rem !important;
+  padding: 5px 20px;
+  transition: all 0.5s;
+  margin: 10px 0;
+  font-weight: 700;
+  border: 3px solid #E5E5E5;
+  font-size: 1rem;
+  position: relative;
+}
+header #ivory form input {
+  border: none !important;
+  border-radius: 2.5rem 0 0 2.5rem;
+  background: white;
+  width: 100% !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600;
+  color: #bbbbbb;
+}
+header #ivory form input::placeholder {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600;
+  color: #bbbbbb;
+}
+header #ivory form button.is-search-submit {
+  border-radius: 0 2.5rem 2.5rem 0;
+  border: none;
+  background: #E5E5E5;
+  color: white;
+  font-size: 1rem !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+header #insta {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+header #menu-btn-div {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4rem;
+  padding: 0;
+}
+header #menu-btn-div h4 {
+  margin-bottom: 0;
+}
+header #menu-btn-div .menu-label {
+  margin-right: 0.5rem;
+  color: #bbbbbb;
+}
+header #menu-btn-div .menu-btn {
+  background: #FF8800;
+  height: 4rem;
+  width: 4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+header #menu-btn-div .menu-btn h4 {
+  transition: all 0.3s;
+}
+header #menu-btn-div .menu-btn:hover {
+  background: #17BEBB;
+}
+header #menu-btn-div .menu-btn:hover h4 {
+  transform: scale(1.1);
+}
+
+#is-ajax-search-result-96.is-ajax-search-result {
+  position: fixed !important;
+  width: 50vw !important;
+  left: 25vw !important;
+}
+
+div.is-ajax-search-details, div.is-ajax-search-result {
+  margin-top: 50px;
+  position: fixed;
+  top: 6rem;
+  width: 50vw;
+  left: 25vw;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #6C6C6C;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .rounded {
+    border-radius: 0.8rem;
+  }
+}
+
+.region {
+  border: 1px solid #bbbbbb;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+@media only screen and (min-width: 768px) {
+  .region {
+    border-radius: 0.8rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .region {
+    padding: 2rem;
+  }
+}
+
+.info.region {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info.region p {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
