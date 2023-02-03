@@ -11,7 +11,7 @@ Requires PHP: 5.6
 This theme, like WordPress, is licensed under the GPL.
 */
 
-@import 'mixins', 'var', 'font', 'buttons', 'form', 'menu';
+@import 'mixins', 'var', 'font', 'buttons', 'form', 'menu', 'footer';
 
 body{
     font-family: $Montserrat;
@@ -50,4 +50,23 @@ body{
     p{
         margin-bottom: 0;
     }
+}
+.bg-light{
+    background: $pale-grey;
+}
+a{
+    font-weight: $bold;
+    text-decoration: none;
+}
+a.pink{
+    color: #F3ABC4;
+}
+a.teal{
+    color: $teal;
+}
+a.orange{
+    color: $orange;
+}
+a.blue{
+    color: $blue;
 }

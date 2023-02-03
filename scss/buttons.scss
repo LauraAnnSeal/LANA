@@ -72,7 +72,8 @@
     }
     &:hover{
         color: white;
-        padding: 5px 40px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
 }
@@ -103,6 +104,17 @@
         background: lighten($orange, 10%);
     }
 }
+.btn-solid.btn-white{
+    background: white;
+    color: $blue;
+    &:hover{
+        color: white;
+        background:  $teal;
+        font-weight: $semibold;
+    }
+}
+
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -142,6 +154,7 @@
         background: $blue;
     }
 }
+
 .btn-line.btn-teal{
     color: $teal;
     border: 3px solid $teal;
@@ -156,6 +169,14 @@
     &:hover{
         color: white;
         background: $orange;
+    }
+}
+.btn-line.btn-white{
+    background: none;
+    color: white;
+    border: 3px solid white;
+    &:hover{
+        background: $teal;
     }
 }
 
@@ -202,4 +223,18 @@
     &:hover{
         background: darken($pale-grey, 10%);
     }
+}
+.btn.form-btn-icon.btn-grey{
+    background: $grey;
+    &:hover{
+        background: darken($grey, 10%);
+    }
+}
+
+.btn-square{
+    border-radius: 0.8rem!important;
+}
+.btn-lg{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }

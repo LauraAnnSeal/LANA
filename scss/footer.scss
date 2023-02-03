@@ -1,0 +1,44 @@
+.site-footer.container-fluid{
+    margin: 8rem 0 2rem 0;
+    padding: 0;
+}
+#footer-logo{
+    width: 60vw;
+    @include mQ ($md){
+        width: 40vw;
+    }
+    @include mQ ($lg){
+        width: 25vw;
+    }
+}
+.footer-el{
+    padding: 2rem;
+    .btn{
+        margin: 5px 0!important;
+    }
+}
+.footer-bottom{
+    padding: 2rem;
+}
+.attribution-text{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.footer-prompts{
+    button{
+        width: 100%;
+        text-align: left;
+    }
+}
+.footer-links{
+    @include mQ ($md){
+        column-count: 2;
+        margin-top: 2rem;
+    }
+    a{
+        width: 100%;
+        text-align: left;
+    }
+}

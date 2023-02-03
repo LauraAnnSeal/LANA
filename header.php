@@ -38,6 +38,15 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'live-art-network-africa' ); ?></a>
 
+
+
+
+
+
+<!-- 
+	HEADER
+ -->
+
 	<header id="masthead" class="site-header container-fluid">
 		<div class="row">
 			<!-- logo -->
@@ -58,17 +67,89 @@
 					</a>
 			</div>
 			<!-- menu button -->
-			<div id="menu-btn-div"class="col-3 d-lg-4">
-					<h4 class="menu-label">Menu</h4>
+			<div id="menu-btn-div"class="col-6 d-lg-4">
+					<h4 class="menu-label d-none d-md-block">Menu</h4>
 					<div class="menu-btn">
-						<h4><i class="fa-solid fa-bars"></i></h4>
+						<h4><i class="fa-sharp fa-solid fa-bars"></i></h4>
 					</div>
 			</div>
 		</div>
 	</header><!-- #masthead -->
 
+	<div class="container-fluid d-md-none">
+		<div class="row">
+			<div id="ivory-mobile" class="col-12">
+					<?php echo do_shortcode('[ivory-search id="96" title="Custom Search Form"]') ?>
+					<a href="<?php echo get_field('instagram_handle', 11) ?>" class=" btn form-btn-icon btn-grey">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+			</div>
+		</div>
+	</div>
+
+
+
+<div id="wrapper"></div>
+
+	<!-- 
+		MENU OPEN
+	 -->
+	<div class="container-fluid" id="menu-open">
+		<div class="fixed-content">
+			<div id="close-menu">
+				<h4><i class="fa-sharp fa-solid fa-xmark"></i></h4>
+			</div>
+		</div>
+
+		<div class="container-fluid menu-container">
+		<div class="logo-container">
+				<?php 
+				$logo_in_white = get_field('logo_in_white', 11);
+				if( !empty( $logo_in_white ) ): ?>
+					<a href="<?php echo get_home_url() ?>">
+						<img id="menu-logo" src="<?php echo esc_url($logo_in_white['url']); ?>" alt="<?php echo esc_attr($logo_in_white['alt']); ?>" />
+					</a>
+				<?php endif; ?>
+				</div>
+
+			<div class="row">
+				
+				<div id="menu-row">
+				<?php 
+					$primaryNav = wp_get_nav_menu_items('2');
+					foreach ( $primaryNav as $navItem ) {
+						$active = 'active';
+						if($navItem->title != get_the_title()){$active = '';};
+						if(!$navItem->menu_item_parent){
+							echo '<div class="dotted rounded"> <a class="parent btn btn-solid btn-white '.$active.' '.$navItem->ID.'" id="'.$navItem->title.'" href="'.$navItem->url.'" ><i class="fa-solid fa-circle"></i> '.$navItem->title.'</a><br>';
+							$secondaryNav = wp_get_nav_menu_items('2');
+							foreach ( $secondaryNav as $subItem ) {
+								$active = 'active';
+								if($subItem->title != get_the_title()){$active = '';};
+								if($subItem->menu_item_parent == $navItem->ID){
+									echo '<a class="child btn btn-line btn-white btn-sm '.$active.' '.$subItem->menu_item_parent.'" id="'.$subItem->title.'" href="'.$subItem->url.'" ><i class="fa-solid fa-circle"></i> '.$subItem->title.'</a><br>';
+								}
+							}
+							echo '</div>';
+						}
+					}
+				?>
+				<div class="subscribe-div">
+					<button class="btn btn-solid btn-teal">
+					<i class="fa-regular fa-envelope"></i> Subscribe
+					</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 
 	<script>
-		const searchIcon = document.querySelector('.is-search-submit');
-		searchIcon.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>'
+		const searchIcon = document.querySelectorAll('.is-search-submit');
+		searchIcon.forEach(icon => {
+			icon.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>'
+		})
 	</script>

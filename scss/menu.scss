@@ -1,63 +1,25 @@
 
+/* -------------------------------------------------------------------------- */
+/*                                 Header only                                */
+/* -------------------------------------------------------------------------- */
 header{
     width: 100vw;
     height: 4rem;
     background: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-menu-bar;
+    // site logo to the left
     #site-logo{
         position: absolute;
         top: 0;
         left: 0;
         height: 4rem;
     }
-    #ivory{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        height: 4rem;
-        form{
-            width: 100%;
-            background: white;
-            border-radius: 2.5rem!important;
-            padding: 5px 20px;
-            transition: all 0.5s;
-            margin: 10px 0;
-            font-weight: $bold;
-            border: 3px solid $pale-grey;
-            font-size: 1rem;
-            position: relative;
-            input{
-                border: none!important;
-                border-radius: 2.5rem 0 0 2.5rem;
-                background: white;
-                width: 100%!important;
-                font-family: $Montserrat!important;
-                font-weight: $semibold;
-                color: $grey;
-                &::placeholder{
-                    font-family: $Montserrat!important;
-                    font-weight: $semibold;
-                    color: $grey;
-                }
-            }
-            button.is-search-submit{
-                    border-radius: 0 2.5rem 2.5rem 0;
-                    border: none;
-                    background: $pale-grey;
-                    color: white;
-                    font-size: 1rem!important;
-                    display: inline-flex!important;
-                    justify-content: center!important;
-                    align-items: center!important;
-            }
-        }
-    }
-    #insta{
-        display: inline-flex;
-        justify-content: start;
-        align-items: center;
-    }
+    // menu button to the right
     #menu-btn-div{
         display: inline-flex;
         justify-content: flex-end;
@@ -68,7 +30,10 @@ header{
         height: 4rem;
         padding: 0;
         h4{
-            margin-bottom: 0;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s;
+
         }
         .menu-label{
             margin-right: 0.5rem;
@@ -84,7 +49,6 @@ header{
             color: white;
             cursor: pointer;
             transition: all 0.3s;
-            h4{transition: all 0.3s;}
             &:hover{
                 background: $teal;
                 h4{
@@ -95,12 +59,101 @@ header{
     }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                Ivory Search                                */
+/* -------------------------------------------------------------------------- */
+#ivory, #ivory-mobile{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    form{
+        width: 100%;
+        background: white;
+        border-radius: 2.5rem!important;
+        padding: 5px 20px;
+        transition: all 0.5s;
+        margin: 10px 0;
+        font-weight: $bold;
+        font-size: 1rem;
+        position: relative;
+        input{
+            border: none!important;
+            border-radius: 2.5rem 0 0 2.5rem;
+            background: white;
+            width: 100%!important;
+            font-family: $Montserrat!important;
+            font-weight: $semibold;
+            &::placeholder{
+                font-family: $Montserrat!important;
+                font-weight: $semibold;
+            }
+        }
+        button.is-search-submit{
+                border-radius: 0 2.5rem 2.5rem 0;
+                border: none;
+                background: $pale-grey;
+                color: white;
+                font-size: 1rem!important;
+                display: inline-flex!important;
+                justify-content: center!important;
+                align-items: center!important;
+        }
+    }
+}
+// Ivory search on desktop
+#ivory{
+    form{
+        border: 3px solid $pale-grey;
+        input{
+            color: $grey;
+            &::placeholder{
+                color: $grey;
+            }
+        }
+        button.is-search-submit{
+                background: $pale-grey;
+                color: white;
+        }
+    }
+}
+// ivory search on mobile
+#ivory-mobile{
+    form{
+        border: 3px solid $grey;
+        input{
+            color: $charcoal;
+            &::placeholder{
+                color: $charcoal;
+            }
+        }
+        button.is-search-submit{
+                background: $grey;
+        }
+    }
+}
+// bar with the search bar on mobile
+#ivory-mobile{
+    margin-top: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: $pale-grey;
+}
 
 // ajax search
 #is-ajax-search-result-96.is-ajax-search-result{
     position: fixed!important;
-    width: 50vw!important;
-    left: 25vw!important;
+    width: 88vw!important;
+    left: 5vw!important;
+    margin-left: 0!important;
+    @include mQ ($md){
+        position: fixed!important;
+        width: 50vw!important;
+        left: 25vw!important;
+    }
 }
 div.is-ajax-search-details, div.is-ajax-search-result{
     margin-top: 50px;
@@ -108,4 +161,102 @@ div.is-ajax-search-details, div.is-ajax-search-result{
     top: 6rem;
     width: 50vw;
     left: 25vw;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  Open Menu                                 */
+/* -------------------------------------------------------------------------- */
+#menu-open{
+    transition: all 0.5s;
+    width: 100vw;
+    @include mQ ($md){
+        width: 60vw;
+    }
+    @include mQ ($lg){
+        width: 40vw;
+    }
+    height: 100vh;
+    padding: 0;
+    background: rgba($blue, 0.8);
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    z-index: $z-menu-open;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+  
+    .fixed-content{
+        #close-menu{
+            transition: all 0.5s;
+            background: $teal;
+            height: 4rem;
+            width: 4rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: fixed;
+            top: 0;
+            right: -100vw;
+            cursor: pointer;
+            transition: all 0.3s;
+            h4{
+                margin: 0;
+                padding: 0;
+                transition: all 0.3s;
+            }
+            &:hover{
+                background: $orange;
+                h4{
+                    transform: scale(1.1);
+                }
+            }
+            
+        }        
+    }
+    .dotted.rounded{
+        margin: 1rem;
+        padding: 1rem;
+        border: 2px dashed white;
+    }
+   .menu-container{
+    margin: 4rem 0 6rem 0;
+
+    .logo-container{
+        width: 100vw;
+        margin-left: 1rem;
+        #menu-logo{
+            height: 4rem;
+        }
+    }
+   }
+   #menu-row{
+    margin-top: 2rem;
+    a.btn{
+        margin: 0.2rem;
+    }
+    a.parent{
+        margin-top: 0.5rem;
+    }
+   }
+   .subscribe-div{
+    margin: 1rem;
+   }
+}
+
+
+#wrapper{
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: $z-menu-open;
+    transition: all 0.5s;
 }
