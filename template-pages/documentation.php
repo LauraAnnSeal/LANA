@@ -41,7 +41,7 @@ Template Post Type: page
             <div class="col-12 col-md-4">
                 <div class="info region border-lana-teal text-lana-teal">
                     <div class="col-3 d-flex">
-                        <div class="btn form-btn-icon btn-teal"><i class="fa-solid fa-info"></i></div>
+                        <div class="btn btn-icon btn-teal"><i class="fa-solid fa-info"></i></div>
                     </div>
                     <div class="col-9">
                         <p class="text-lana-teal bolder">
@@ -60,38 +60,56 @@ Template Post Type: page
 <div class="container my-5">
         <div class="row my-5">
             <div class="col-12">
+
+
                 <h2>Clear buttons</h2>
             </div>
-            <div class="col-12 col-md-6">
-                <a href="" class="btn btn-clear btn-orange"><i class="fa-solid fa-circle"></i> Clear Button</a>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-clear btn-lg btn-blue"><i class="fa-solid fa-circle"></i> blue lg</a>
             </div>
-            <div class="col-12 col-md-6">
-                <a href="" class="btn btn-clear btn-sm btn-blue"><i class="fa-solid fa-square-arrow-up-right"></i> Clear Small</a>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-clear btn-orange"><i class="fa-solid fa-circle"></i>  orange</a>
+            </div>
+            
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-clear btn-sm"><i class="fa-solid fa-square-arrow-up-right"></i> neutral sm</a>
             </div>
         </div>
         <div class="row my-5">
             <div class="col-12">
+
+
                 <h2>Solid buttons</h2>
             </div>
-            <div class="col-12 col-md-6">
-                <a href="" class="btn btn-solid btn-orange"> <i class="fa-solid fa-arrow-pointer"></i>Solid Button</a>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-solid btn-teal btn-lg"> <i class="fa-solid fa-arrow-pointer"></i>teal lg</a>
             </div>
-            <div class="col-12 col-md-6">
-                <a href="" class="btn btn-solid btn-sm btn-blue">Solid Small</a>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-solid btn-white"> <i class="fa-solid fa-arrow-pointer"></i>neutral</a>
+            </div>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-solid btn-sm btn-blue">blue sm</a>
             </div>
         </div>
         <div class="row my-5">
             <div class="col-12">
+
+
                 <h2>Line buttons</h2>
             </div>
-            <div class="col-12 col-md-6">
-                <a href="" class="btn btn-line btn-orange"> <i class="fa-solid fa-arrow-pointer"></i>Solid Button</a>
-                <a href="" class="btn form-btn-icon btn-orange"><i class="fa-brands fa-instagram"></i></a>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-line btn-lg"> <i class="fa-solid fa-arrow-pointer"></i>Neutral LG</a>
+                <a href="" class="btn btn-icon btn-orange btn-lg"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <div class="col-12 col-md-6">
-                <a href="" class="btn btn-line btn-sm btn-teal">Solid Small</a>
-                <a href="" class="btn form-btn-icon btn-teal"><i class="fa-brands fa-instagram"></i></a>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-line btn-blue"> <i class="fa-solid fa-arrow-pointer"></i>Blue</a>
+                <a href="" class="btn btn-icon btn-blue"><i class="fa-solid fa-power-off"></i></a>
             </div>
+            <div class="col-12 col-md-4">
+                <a href="" class="btn btn-line btn-sm btn-teal">Teal Small</a>
+                <a href="" class="btn btn-icon btn-teal btn-sm"><i class="fa-solid fa-check"></i></a>
+            </div>
+
         </div>
     </div>
 </div>
@@ -115,11 +133,6 @@ Template Post Type: page
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="col-2">
-                <a href="" class="btn form-btn-icon btn-orange"><i class="fa-brands fa-instagram"></i></a>
             </div>
 
         </div>

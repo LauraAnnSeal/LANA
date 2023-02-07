@@ -1,5 +1,29 @@
 .btn{
+    display: inline-block;
+    padding: .75rem 1.25rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10rem;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 5px 0.2rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    i{
+        padding-right: .5rem;
+    }
+}
+.btn.btn-sm{
+    line-height: 1rem;
+    padding: .45rem .8rem;
+    font-size: .9rem;
+}
+.btn.btn-lg{
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
 }
 
 
@@ -7,51 +31,18 @@
 /*                          Clear button with icon                            */
 /* -------------------------------------------------------------------------- */
 .btn-clear{
-    font-size: 1.2rem;
-    letter-spacing: calc(1.2rem / 6);
-    font-weight: $bold;
-    text-transform: uppercase;
+    font-weight: $semibold;
     border: 1px solid $charcoal;
-    border-radius: 2.5rem;
-    padding: 5px 20px;
-    transition: all 0.5s;
-    i{
-        margin-right: 10px;
-        transition: all 0.7s;
-    }
-    margin: 10px 0;
-    &:hover{
-        color: white;
-        padding: 5px 30px;
-        i{
-            color: white!important; 
-            transform: translateX(10px);
-        }
-    }
-    &:focus{
-        color: white!important;
-    }
-}
-.btn-clear.btn-sm{
-    font-size: 1rem;
+    @include clearBtn($charcoal);
 }
 .btn-clear.btn-teal{
-    i{ color: $teal;}
-    &:hover{
-        background: $teal;
-    }
+    @include clearBtn($teal);
 }
 .btn-clear.btn-orange{
-    i{ color: $orange;}
-    &:hover{
-        background: $orange;
-    }
+    @include clearBtn($orange);
 }
 .btn-clear.btn-blue{
-    i{ color: $blue;}
-    &:hover{
-        background: $blue;
-    }
+    @include clearBtn($blue);
 }
 
 
@@ -59,59 +50,27 @@
 /*                            Solid button with/without icon                  */
 /* -------------------------------------------------------------------------- */
 .btn-solid{
-    background: black;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 2.5rem;
-    padding: 5px 30px;
     border: none;
-    transition: all 0.5s;
-    margin: 10px 0;
-    i{
-        margin-right: 15px;
-    }
-    &:hover{
-        color: white;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-}
-.btn-solid.btn-sm{
-    font-size: 1rem;
-    padding: 5px 20px;
-    &:hover{
-        color: white;
-        padding: 5px 40px;
-    }
-    
+    font-weight: $semibold;
+    @include solid($grey, $charcoal, white);
 }
 .btn-solid.btn-blue{
-    background: $blue;
-    &:hover{
-        background: lighten($blue, 10%);
-    }
+    @include solid($blue, $teal, white);
 }
 .btn-solid.btn-teal{
-    background: $teal;
-    &:hover{
-        background: lighten($teal, 5%);
-    }
+    @include solid($teal, $blue,  white);
 }
 .btn-solid.btn-orange{
-    background: $orange;
-    &:hover{
-        background: lighten($orange, 10%);
-    }
+    @include solid($orange, lighten($orange, 15%), white);
 }
 .btn-solid.btn-white{
-    background: white;
-    color: $blue;
-    &:hover{
-        color: white;
-        background:  $teal;
-        font-weight: $semibold;
-    }
+    @include solid(white, $teal, $blue);
+}
+.btn-solid.btn-data-save{
+    @include solid($grey, $green, white);
+}
+.btn-solid.btn-data-save.active{
+    @include solid($green, darken($green, 15%), white);
 }
 
 
@@ -122,119 +81,148 @@
 /* -------------------------------------------------------------------------- */
 
 .btn-line{
-    background: white;
-    font-size: 1.2rem;
-    border-radius: 2.5rem!important;
-    padding: 5px 30px;
-    transition: all 0.5s;
-    margin: 10px 0;
-    font-weight: $bold;
-    i{
-        margin-right: 15px;
-    }
-    &:hover{
-        padding: 5px 40px;
-        color: white;
-    }
+    font-weight: $semibold;
+    @include lineBtn($charcoal, white);
 
 }
-.btn-line.btn-sm{
-    font-size: 1rem;
-    padding: 5px 20px;
-    &:hover{
-        padding: 5px 40px;
-    }
-    
-}
 .btn-line.btn-blue{
-    color: $blue;
-    border: 3px solid $blue;
-    &:hover{
-        color: white;
-        background: $blue;
-    }
+    @include lineBtn($blue, white);
 }
 
 .btn-line.btn-teal{
-    color: $teal;
-    border: 3px solid $teal;
-    &:hover{
-        color: white;
-        background: $teal;
-    }
+    @include lineBtn($teal, white);
 }
 .btn-line.btn-orange{
-    color: $orange;
-    border: 3px solid $orange;
-    &:hover{
-        color: white;
-        background: $orange;
-    }
+    @include lineBtn($orange, white);
 }
 .btn-line.btn-white{
-    background: none;
     color: white;
     border: 3px solid white;
-    &:hover{
-        background: $teal;
-    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(white, 0);
+        border-radius: 10rem;
+        z-index: -2;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $yellow;
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+      }
+      &:hover {
+        color: $charcoal;
+        &:before {
+          width: 100%;
+        }
+      }
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                Icon buttons                                */
 /* -------------------------------------------------------------------------- */
-.btn.form-btn-icon{
-    background: $charcoal;
+.btn.btn-icon{
     font-size: 1.5rem;
-    height: 2.5rem;
-    width: 2.5rem;
-    margin: 0 0.4rem;
+    background: $charcoal;
+    height: 3rem;
+    width: 3rem;
     border-radius: 2.5rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    transition: all 0.5s;
-    transform-origin: center;
-    &:hover{
-        transform: scale(1.1);
-    }
+    border: none!important;
+     color: white;
+     i{
+        padding: 0;
+     }
 }
-.btn.form-btn-icon.btn-teal{
-    background: $teal;
-    &:hover{
-        background: darken($teal, 10%);
-    }
+.btn.btn-icon.btn-lg{
+    font-size: 2rem;
+    height: 3.8rem;
+    width: 3.8rem;
+    border-radius: 4rem;
 }
-.btn.form-btn-icon.btn-orange{
-    background: $orange;
-    &:hover{
-        background: lighten($orange, 10%);
-    }
-}
-.btn.form-btn-icon.btn-blue{
-    background: $blue;
-    &:hover{
-        background: lighten($blue, 10%);
-    }
-}
-.btn.form-btn-icon.btn-pale{
-    background: $pale-grey;
-    &:hover{
-        background: darken($pale-grey, 10%);
-    }
-}
-.btn.form-btn-icon.btn-grey{
-    background: $grey;
-    &:hover{
-        background: darken($grey, 10%);
-    }
+.btn.btn-icon.btn-sm{
+    font-size: 1.2rem;
+    height: 2.3rem;
+    width: 2.3rem;
+    border-radius: 2rem;
 }
 
+
+.btn.btn-icon.btn-teal{
+    @include icon($blue, $teal, white, 2.5rem);
+}
+.btn.btn-icon.btn-green{
+    @include icon($grey, $green, white, 2.5rem);
+}
+.btn.btn-icon.btn-orange{
+   @include icon($orange, lighten($orange, 15%), white, 2.5rem);
+   
+}
+.btn.btn-icon.btn-blue{
+    @include icon($blue, $teal, white, 2.5rem);
+}
+.btn.btn-icon.btn-pale{
+    @include icon($pale-grey, $grey, white, 2.5rem);
+}
+.btn.btn-icon.btn-grey{
+    @include icon($grey, $charcoal, white, 2.5rem);
+}
+.btn.btn-icon.btn-charcoal{
+    @include icon($charcoal, black, white, 2.5rem);
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Square                                   */
+/* -------------------------------------------------------------------------- */
 .btn-square{
     border-radius: 0.8rem!important;
 }
-.btn-lg{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+/* -------------------------------------------------------------------------- */
+/*                                Square solid                                */
+/* -------------------------------------------------------------------------- */
+.btn-square.btn-solid.btn-blue{
+    @include solid-square($blue, $teal, white);
+}
+.btn-square.btn-solid.btn-teal{
+    @include solid-square($teal, $blue,  white);
+}
+.btn-square.btn-solid.btn-orange{
+    @include solid-square($orange, lighten($orange, 15%), white);
+}
+.btn-square.btn-solid.btn-white{
+    @include solid-square(white, $teal, $blue);
+}
+.btn-square.btn-solid.btn-data-save{
+    @include solid-square($grey, $green, white);
+}
+.btn-square.btn-solid.btn-data-save.active{
+    @include solid-square($green, darken($green, 15%), white);
+}
+/* -------------------------------------------------------------------------- */
+/*                                 Square line                                */
+/* -------------------------------------------------------------------------- */
+.btn-square.btn-line.btn-blue{
+    @include lineBtn-square($blue, white);
+}
+
+.btn-square.btn-line.btn-teal{
+    @include lineBtn-square($teal, white);
+}
+.btn-square.btn-line.btn-orange{
+    @include lineBtn-square($orange, white);
 }

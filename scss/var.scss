@@ -24,6 +24,7 @@ $blue: #337CA0;
 $charcoal: #6C6C6C;
 $grey: #bbbbbb;
 $pale-grey: #E5E5E5;
+$green: #7dd501;
 
 $color-list: (
     lana-orange:#FF8800,
@@ -32,7 +33,7 @@ $color-list: (
     lana-blue: #337CA0,
     lana-charcoal: #6C6C6C,
     lana-grey: #bbbbbb,
-    lana-palegrey: #E5E5E5
+    lana-pale-grey: #E5E5E5
 );
 
 @each $name, $color in $color-list {
@@ -49,7 +50,7 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
-$xxl: 2500px;
+$xxl: 2560px;
 
 
 /* -------------------------------------------------------------------------- */

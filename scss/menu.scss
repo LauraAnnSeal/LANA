@@ -19,6 +19,7 @@ header{
         left: 0;
         height: 4rem;
     }
+
     // menu button to the right
     #menu-btn-div{
         display: inline-flex;
@@ -134,7 +135,6 @@ header{
 }
 // bar with the search bar on mobile
 #ivory-mobile{
-    margin-top: 4rem;
     height: 4rem;
     display: flex;
     justify-content: stretch;
@@ -176,6 +176,10 @@ div.is-ajax-search-details, div.is-ajax-search-result{
     @include mQ ($lg){
         width: 40vw;
     }
+    @include mQ ($xl){
+        width: 30vw;
+    }
+
     height: 100vh;
     padding: 0;
     background: rgba($blue, 0.8);
@@ -218,6 +222,7 @@ div.is-ajax-search-details, div.is-ajax-search-result{
             
         }        
     }
+
     .dotted.rounded{
         margin: 1rem;
         padding: 1rem;
@@ -233,6 +238,9 @@ div.is-ajax-search-details, div.is-ajax-search-result{
             height: 4rem;
         }
     }
+   }
+   hr{
+    border-top: 2px solid white;
    }
    #menu-row{
     margin-top: 2rem;
@@ -260,3 +268,29 @@ div.is-ajax-search-details, div.is-ajax-search-result{
     z-index: $z-menu-open;
     transition: all 0.5s;
 }
+
+
+    // Data Save
+    .data-saving-mode-button{
+        span{
+            font-size: 1rem;
+            line-height: 1rem;
+            text-transform: uppercase;
+            font-weight: $bold;
+            color: $grey;
+        }
+    }
+
+    // .data-saving-mode-button{
+    //     display: inline-flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     margin: 1rem 0 0 1rem;
+    //     span{
+    //         font-size: 1rem;
+    //         line-height: 1rem;
+    //         color: white;
+    //         text-transform: uppercase;
+    //         font-weight: $bold;
+    //     }
+    // }

@@ -61,13 +61,15 @@
 			</div>
 			<!-- search bar -->
 			<div id="ivory" class="d-none d-md-inline-flex col-md-5 col-lg-4">
-					<?php echo do_shortcode('[ivory-search id="96" title="Custom Search Form"]') ?>
-					<a href="<?php echo get_field('instagram_handle', 11) ?>" class="d-none d-lg-inline-flex btn form-btn-icon btn-pale">
-						<i class="fa-brands fa-instagram"></i>
-					</a>
+					<?php echo do_shortcode('[ivory-search id="96" title="Header Search"]') ?>
+			</div>
+			<!--  -->
+			<div class="data-saving-mode-button d-none col-2">
+				<span class="text-end pe-1">Data Saving Mode</span>
+				<button class="btn btn-icon btn-grey"><i class="fa-solid fa-power-off"></i></button>
 			</div>
 			<!-- menu button -->
-			<div id="menu-btn-div"class="col-6 d-lg-4">
+			<div id="menu-btn-div"class="col-6 col-lg-4">
 					<h4 class="menu-label d-none d-md-block">Menu</h4>
 					<div class="menu-btn">
 						<h4><i class="fa-sharp fa-solid fa-bars"></i></h4>
@@ -79,8 +81,8 @@
 	<div class="container-fluid d-md-none">
 		<div class="row">
 			<div id="ivory-mobile" class="col-12">
-					<?php echo do_shortcode('[ivory-search id="96" title="Custom Search Form"]') ?>
-					<a href="<?php echo get_field('instagram_handle', 11) ?>" class=" btn form-btn-icon btn-grey">
+					<?php echo do_shortcode('[ivory-search id="96" title="Header Search"]') ?>
+					<a href="<?php echo get_field('instagram_handle', 11) ?>" class=" btn btn-icon btn-grey">
 						<i class="fa-brands fa-instagram"></i>
 					</a>
 			</div>
@@ -102,7 +104,7 @@
 		</div>
 
 		<div class="container-fluid menu-container">
-		<div class="logo-container">
+			<div class="logo-container">
 				<?php 
 				$logo_in_white = get_field('logo_in_white', 11);
 				if( !empty( $logo_in_white ) ): ?>
@@ -110,9 +112,15 @@
 						<img id="menu-logo" src="<?php echo esc_url($logo_in_white['url']); ?>" alt="<?php echo esc_attr($logo_in_white['alt']); ?>" />
 					</a>
 				<?php endif; ?>
-				</div>
+			</div>
+
+			<hr>
+				
 
 			<div class="row">
+			<div class="data-saving-mode-button">
+				<button class="btn btn-solid btn-data-save"><i class="fa-solid fa-power-off"></i> Data Saving Mode: <b>Off</b></button>
+			</div>
 				
 				<div id="menu-row">
 				<?php 
@@ -135,7 +143,7 @@
 					}
 				?>
 				<div class="subscribe-div">
-					<button class="btn btn-solid btn-teal">
+					<button class="btn btn-solid btn-orange">
 					<i class="fa-regular fa-envelope"></i> Subscribe
 					</button>
 				</div>

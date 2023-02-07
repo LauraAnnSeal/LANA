@@ -1,24 +1,51 @@
+<?php 
+/**
+Template Name: Featured Artists page
+Template Post Type: page
+*/
+?>
+
+
+<?php get_header() ?>
+
+<div class="container-fluid" id="header-banner">
+    <h3><?php echo get_the_title() ?></h3>
+</div>
+
+<div class="container mb-3">
+    <div class="row">
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <label class="sr-only">Search</label>
+            <div class="input-group mb-2 input-search">
+                <input type="text" class="form-control shadow-none" placeholder="Search here...">
+                <div class="input-group-end">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
 <?php 
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-$posts = get_posts(array(
-    'posts_per_page'    => 2,
-    'post_type'         => 'people'
-));
+// args
+$args = array(
+    'numberposts'   => 1,
+    'post_type'     => 'people',
+    'paged'          => $paged,
+);
+// query
+$the_query = new WP_Query( $args );
+?>
+<?php if( $the_query->have_posts() ): ?>
+    <div class="container gx-5">
+        <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <?php if(get_field('included_in_featured_artists')): ?>
 
-if( $posts ): ?>
-    
-<div class="container gx-5">
-        
-    <?php foreach( $posts as $post ): 
-        
-        setup_postdata( $post );
-
-        if(get_field('included_in_featured_artists')):
-        
-        ?>
-
-           <div class="row single-result">
+            <div class="row single-result">
                 
                 <div class="col-12 col-md-6 col-lg-4 headshot" style="background-image: url('<?php echo get_the_post_thumbnail_url() ?>')">
                 </div>
@@ -60,20 +87,19 @@ if( $posts ): ?>
                 </div>
            </div>
 
-           
-
-           
-
-    
-    <?php 
-    endif;
-endforeach; 
-?>
-<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-    <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-    
+            <?php endif; ?>
+        <?php endwhile; ?>
+            <?php wpbeginner_numeric_posts_nav(); ?>
+        
     </div>
-    
-    <?php wp_reset_postdata(); ?>
-
 <?php endif; ?>
+<?php wp_reset_query();   // Restore global post data stomped by the_post(). ?>
+
+<script>
+    const bios = document.querySelectorAll('.bio')
+    bios.forEach(bio => {
+        let contents = bios.innerText;
+    })
+</script>
+
+<?php get_footer() ?>
