@@ -146,6 +146,7 @@
      i{
         padding: 0;
      }
+     font-weight: $bold;
 }
 .btn.btn-icon.btn-lg{
     font-size: 2rem;
@@ -162,7 +163,7 @@
 
 
 .btn.btn-icon.btn-teal{
-    @include icon($blue, $teal, white, 2.5rem);
+    @include icon($teal, $blue, white, 2.5rem);
 }
 .btn.btn-icon.btn-green{
     @include icon($grey, $green, white, 2.5rem);
@@ -182,6 +183,9 @@
 }
 .btn.btn-icon.btn-charcoal{
     @include icon($charcoal, black, white, 2.5rem);
+}
+.btn.btn-icon.btn-yellow{
+    @include icon($yellow, $orange, $charcoal, 2.5rem);
 }
 
 

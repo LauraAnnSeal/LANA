@@ -5,12 +5,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem;
     margin-bottom: 3rem;
     text-align: center;
+    z-index: 0;
     h3{
         color: white;
         letter-spacing: 20px;
+    }
+    @include mQ($md){
+        padding: 4.5rem 0.5rem 0.5rem 0.5rem;
     }
 }
 // #header-banner{
@@ -29,7 +33,7 @@
 //     text-align: center;
 // }
 .section{
-    height: 6rem;
+    height: 2rem;
 }
 .region{
     border: 1px solid $grey;
@@ -45,6 +49,7 @@
 }
 
 .info.region{
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
